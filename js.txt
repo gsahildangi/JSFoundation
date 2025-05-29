@@ -1,0 +1,14 @@
+                                             "Js"
+
+Parsing: Now parsing is reading the code file and then storing the keywords like console,for,class and then understand
+         what user wants.
+
+
+    [Before the code run-time]     
+               |
+ {[code file]->parse->[syntax tree]}--->{[JIT(just in time)Conpiler]}--->{First it[byte code]->[machine code]}--->[Code Execution]  
+  
+   This is the execition cycle of the javascript code 
+ 
+ Kaywords in above diagram:
+ JIT compiler  first change the code in just byte code file and then compiler convert it into Machine code.
