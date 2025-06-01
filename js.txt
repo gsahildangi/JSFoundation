@@ -12,3 +12,10 @@ Parsing: Now parsing is reading the code file and then storing the keywords like
  
  Kaywords in above diagram:
  JIT compiler  first change the code in just byte code file and then compiler convert it into Machine code.
+
+
+ Type of DataTypes:
+
+ So there are basically 2 types:
+    - Primitive   - String, Boolean, Number, null, undefined ,Symbol
+    - Non Primitive - Object, Array, function 
