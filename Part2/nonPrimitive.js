@@ -1,7 +1,7 @@
 let userNameObj = {
     firstName : 'Sahil',
     lastName : 'Dangi',
-    isLogedIn = true,
+    isLogedIn : true,
     'bio data' : "This is a biodata variable" // line-no-25 - Now the ques is how we can access this variable as we will not be able o access this using "." operator.
 }
 /*
@@ -33,7 +33,28 @@ console.log(typeof(userNameObj));
 //Array stands for collection of similar datatypes.
 //In array the above statement is not true. 
 
-let anoter
+let anotherUser = ['Sahil' ,true]
+
+console.log(anotherUser);
+
+console.log(anotherUser[1]);
+
+//A Little demo of type conversion
+
+let aValue = "12sss" ;
+
+console.log(Number(aValue)); // This will give us 1 as this is a true value. " let aValue = True "
+
+console.log(Number (aValue)); // Now this will convert 2 string in number and give a number 2 - let aValue = "2" ;
+
+console.log(typeof (Number (aValue))) // let aValue = "12sss"  Now this is intreting as what system will convert this into . 
+                                      // So this will be converted to NaN that is (Not a number) and we will check the typeof of NaN then is a also a Nunber type 
+                                      //as we are type conversing it into the NUMBER.
+
+                                      
+
+
+
 
 
 
