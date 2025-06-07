@@ -19,3 +19,14 @@ Parsing: Now parsing is reading the code file and then storing the keywords like
  So there are basically 2 types:
     - Primitive   - String, Boolean, Number, null, undefined ,Symbol
     - Non Primitive - Object, Array, function 
+
+
+    The array method Slice() :  is correct because it creates a shallow copy of a s
+    pecified portion of an array without modifying the original array, aligning perfectly with the 
+    question's requirement. This makes it a fundamental tool for working with arrays in programming, 
+    reinforcing your understanding of array manipulation.
+
+    --------------------------------------------------------------------------------------------------------------------
+
+                                                   INTRODUCTION TO lOOPS:
+
