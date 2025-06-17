@@ -30,3 +30,12 @@ Parsing: Now parsing is reading the code file and then storing the keywords like
 
                                                    INTRODUCTION TO lOOPS:
 
+All done within the files.
+
+
+--------------------------------------------------------------------------------------------------------------
+
+                                                         Function in Js:-
+
+  
+                                                  
