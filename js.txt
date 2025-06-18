@@ -38,4 +38,55 @@ All done within the files.
                                                          Function in Js:-
 
   
-                                                  
+Now people say that arrow funtiion do not have "this" reference .
+
+function fun (){
+  console.log(this);
+}
+fun();
+//This when runned on a browser console will give a something like windows object which mean that it gives a reference of browser .
+
+//Same when arrow funtion is called on browser console also give same reference which mean that arrow fuction also have this reference//
+
+
+==========================
+
+Now                  Higher order function / First class function
+
+A function which take a function as a paramerter is called higher class/order function.
+
+The best example for this is : forEach loop.
+
+arrTeas.forEach((tea)=> {
+          if(tea === "chai" || tea === "Chai"){
+             return;
+          }
+          // Here you can check that a object arrTeas is calling a forEach function which has argument as a arrow function
+
+--------------------------------------
+
+Nesting of function:
+
+function createTeaMaker (){
+          return function (teaType){
+               return `Making ${teaType}`
+          }
+   }
+   let teaMaker = createTeaMaker(); // above as we are returning a funciton so this teaMaker has instance of that function so we can call that fucntion 
+                                     // with help of teaMaker ex: teaMaker() this will envoke the function which is inside that createTeaMaker . Which is also returned by createTeaMaker.
+   let printThisValue = teaMaker("Green sharbat")
+   
+   console.log(printThisValue); // Making Green Sharbat
+
+  Now lets check wheather we can access the paramerter of parent funtion in inside function. ------------------------------------------------
+
+  function createTeaMaker (name , order){
+          return function (teaType){
+               return `Making ${teaType} for ${name}. The order Number is ${order}` // Here this is example that inner function is accesing the parameter of parent function.
+          }
+   }
+   let teaMaker = createTeaMaker("Sahil" , 33); // above as we are returning a funciton so this teaMaker has instance of that function so we can call that fucntion 
+                                     // with help of teaMaker ex: teaMaker() this will envoke the function which is inside that createTeaMaker . Which is also returned by createTeaMaker.
+   let printThisValue = teaMaker("Green sharbat")
+  
+   console.log(printThisValue);  // Output : Making Green Sharbat for Sahil. The order number is 33
