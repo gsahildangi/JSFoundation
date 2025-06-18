@@ -49,9 +49,9 @@ fun();
 //Same when arrow funtion is called on browser console also give same reference which mean that arrow fuction also have this reference//
 
 
-==========================
+===============================================================================================
 
-Now                  Higher order function / First class function
+Now                                    Higher order function / First class function
 
 A function which take a function as a paramerter is called higher class/order function.
 
@@ -63,9 +63,9 @@ arrTeas.forEach((tea)=> {
           }
           // Here you can check that a object arrTeas is calling a forEach function which has argument as a arrow function
 
---------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 
-Nesting of function:
+                                         Nesting of function:
 
 function createTeaMaker (){
           return function (teaType){
@@ -90,3 +90,33 @@ function createTeaMaker (){
    let printThisValue = teaMaker("Green sharbat")
   
    console.log(printThisValue);  // Output : Making Green Sharbat for Sahil. The order number is 33
+
+=====================================================================================================================================
+                // Array.prototype.map() :-
+
+The map() method creates a new array populated with the results of calling a provided function on every element in the calling array. 
+The key benefits are:
+Transformation: It transforms each element from the original array.
+
+Immutability: It doesn't change the original array; instead, it returns a new array with transformed values.
+Parameters
+
+callbackFn:-
+
+A function to execute for each element in the array. Its return value is added as a single element in the new array. 
+The function is called with the following arguments:
+
+element
+The current element being processed in the array.
+
+index
+The index of the current element being processed in the array.
+
+array
+The array map() was called upon.
+
+thisArg Optional
+A value to use as this when executing callbackFn. See iterative methods.
+
+Return value
+A new array with each element being the result of the callback function.

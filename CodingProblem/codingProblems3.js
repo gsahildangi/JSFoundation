@@ -39,8 +39,17 @@ function printMultiplicationTable(n) {
 }
 
 function countVowels(str) {
-  return 0;
+     let sum = 0;
+     let vowels = 'aeiouAEIOU'
+     for (let i = 0; i <= str.length ; i++){
+          if(vowels.includes(str[i])){
+            sum = sum + 1;
+          }
+     }
+  return sum;
 }
+
+// console.log(countVowels("SahilDangi"))
 
 
 
