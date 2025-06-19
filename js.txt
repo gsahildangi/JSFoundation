@@ -1,5 +1,10 @@
                                              "Js"
 
+----------------------------------------------------------------------------------------------------------------------
+                                        Part 1 to 5 : "Learn Js Foundation"
+----------------------------------------------------------------------------------------------------------------------
+
+
 Parsing: Now parsing is reading the code file and then storing the keywords like console,for,class and then understand
          what user wants.
 
@@ -26,17 +31,13 @@ Parsing: Now parsing is reading the code file and then storing the keywords like
     question's requirement. This makes it a fundamental tool for working with arrays in programming, 
     reinforcing your understanding of array manipulation.
 
-    --------------------------------------------------------------------------------------------------------------------
-
-                                                   INTRODUCTION TO lOOPS:
+--------------------------------------------------------------------------------------------------------------------
+                                                 INTRODUCTION TO lOOPS:
 
 All done within the files.
 
-
 --------------------------------------------------------------------------------------------------------------
-
-                                                         Function in Js:-
-
+                                                  Function in Js :-
   
 Now people say that arrow funtiion do not have "this" reference .
 
@@ -120,3 +121,86 @@ A value to use as this when executing callbackFn. See iterative methods.
 
 Return value
 A new array with each element being the result of the callback function.
+
+----------------------------------------------------------------------------------------------------------------------
+                                                    Part6 (Javascript OOps)
+----------------------------------------------------------------------------------------------------------------------
+ 
+ JavaScript prototypes are like the behind-the-scenes wizards that enable powerful inheritance and 
+ object behavior.
+
+ function Animal(name) {
+   this.name = name;
+  }
+
+    Animal.prototype.speak = function() {
+    console.log(`${this.name} makes a noise.`);
+  };
+
+  const dog = new Animal('Buddy');
+  dog.speak(); // Buddy makes a noise.
+ 
+
+ /*
+                                " Prof that js is prototype based."
+let myArr = [1,2,3,4,5]
+undefined
+myArr
+(5) [1, 2, 3, 4, 5]
+0: 1
+1: 2
+2: 3
+3: 4
+4: 5
+length: 5
+[[Prototype]]: Array(0)
+When we further click on this prototype the further functinality available for array will appear
+
+[[Prototype]]: Array(0)
+at: ƒ at()
+concat : ƒ concat()
+constructor : ƒ Array()
+copyWithin : ƒ copyWithin()
+entries : ƒ entries()
+every : ƒ every()
+fill : ƒ fill()
+filter : ƒ filter()
+find : ƒ find()
+findIndex : ƒ findIndex()
+findLast : ƒ findLast()
+findLastIndex : ƒ findLastIndex()
+flat : ƒ flat()
+flatMap : ƒ flatMap()
+forEach : ƒ forEach()
+includes : ƒ includes()
+indexOf : ƒ indexOf()
+join : ƒ join()
+keys : ƒ keys()
+lastIndexOf : ƒ lastIndexOf()
+length : 0
+map: ƒ map()
+pop : ƒ pop()
+push : ƒ push()
+reduce : ƒ reduce()
+reduceRight : ƒ reduceRight()
+reverse : ƒ reverse()
+shift : ƒ shift()
+slice : ƒ slice()
+some : ƒ some()
+sort : ƒ sort()
+splice : ƒ splice()
+toLocaleString : ƒ toLocaleString()
+toReversed : ƒ toReversed()
+toSorted : ƒ toSorted()
+toSpliced : ƒ toSpliced()
+toString : ƒ toString()
+unshift : ƒ unshift()
+values : ƒ values()
+with : ƒ with()
+Symbol( Symbol.iterator) : ƒ values()
+Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}
+[[Prototype]] : Object ﻿
+Further for oject we can check the functionality .
+This is the prof that js use prototype.
+
+*/ 
