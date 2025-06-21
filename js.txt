@@ -203,4 +203,46 @@ Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: tr
 Further for oject we can check the functionality .
 This is the prof that js use prototype.
 
+                                      "Just read this is "PROTOTYPE" will be clear to you"
+What Is a Prototype in JavaScript?
+Every object in JavaScript has a hidden property called [[Prototype]] (commonly accessed as __proto__). This property points to another object, and that object is its prototype.
+Think of it like a chain of knowledge:
+If an object doesn’t know how to do something, it asks its prototype. If that prototype doesn’t know, it goes up its prototype chain—and so on—until it hits the end, which is null.
+
+Why Is It Useful?
+This system is what enables inheritance in JavaScript without classes (before ES6). It allows you to define properties and methods in one place and have many objects share that behavior.
+
+Code Example
+function Animal(name) {
+  this.name = name;
+}
+
+Animal.prototype.speak = function() {
+  return `${this.name} makes a noise.`;
+};
+
+const dog = new Animal("Doggo");
+console.log(dog.speak()); // "Doggo makes a noise."
+
+
+Here:
+- dog is an instance of Animal
+- It doesn’t have a speak() method directly
+- But dog.__proto__ === Animal.prototype, so JS finds speak up the chain
+
+Bonus: Prototype vs. __proto__ vs. Object.getPrototypeOf
+- .prototype: Exists on constructor functions (like Animal)—used when creating new objects.
+- __proto__: Actual internal link from one object to its prototype. Mostly for debugging.
+- Object.getPrototypeOf(obj): Preferred and safe way to access the prototype.
+
 */ 
+
+-----------------------------------------------------------------------------------------------------------------
+
+                              "51.Functional constructor and Errors:- "
+
+Previously as we studied that we can make a blueprint with the help of "class" however in js there is another
+way and that is "constructor function" . Also as we have studied we can reuse the code written in function and similarly
+a class can have multiple objecs and single blueprint can be used many places.
+
+

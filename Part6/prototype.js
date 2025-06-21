@@ -29,17 +29,44 @@ let myHardwareCompany = {
 //Now lets check that when we link the basicComputer __proto__ in lenovo object .Lets try to use the 
 //functionality of basicComputer object in lenevo object
 
-console.log(`Using basicComputer functionality : ` , lenovo.screen); // as this screen is common in both the objects
+// console.log(`Using basicComputer functionality : ` , lenovo.screen); // as this screen is common in both the objects
                     // so this lenovo pick up its screen feature and output is  "1080"
 
-console.log(`Now using lenovo feature in myHardware company :`, myHardwareCompany.ram);
-console.log('Lets try to print every __proto__of "basicComputer" all the object when they link to each other :', basicComputer.__proto__ );
-console.log('Lets try to print every __proto__of "lenovo" all the object when they link to each other :', lenovo.__proto__ );
-console.log('Lets try to print every __proto__of  "myHardware " all the object when they link to each other :', myHardwareCompany.__proto__ );
+// console.log(`Now using lenovo feature in myHardware company :`, myHardwareCompany.ram);
+// console.log('Lets try to print every __proto__of "basicComputer" all the object when they link to each other :', basicComputer.__proto__ );
+// console.log('Lets try to print every __proto__of "lenovo" all the object when they link to each other :', lenovo.__proto__ );
+// console.log('Lets try to print every __proto__of  "myHardware " all the object when they link to each other :', myHardwareCompany.__proto__ );
 
 // Output: DO check this and find out what is going on.
 // Lets try to print every __proto__of basicComputer all the object when they link to each other : [Object: null prototype] {}     
 // Lets try to print every __proto__of "lenovo" all the object when they link to each other : { ram: 4, cpu: 12, screen: 720 }
 // Lets try to print every __proto__of "myHardware" all the object when they link to each other : { screen: 1080 }
 
+// Now lets try it with different way. Using js Object.se
 
+ let genericCar = {
+    tyre : 4,
+    door : 4 
+}
+
+let dodge = {
+    engine : 500,
+    transmision : 'manual'
+}
+
+let tesla = {
+    engline : 400,
+    transmision : 'automatic'
+}
+
+Object.setPrototypeOf(dodge,genericCar)
+Object.setPrototypeOf(tesla,dodge)
+
+// console.log(`GenericCar object value :`, genericCar);
+// console.log(`Dodge object value :`,dodge);
+// console.log(`Tesla object value :`,tesla);
+
+// console.log(`Dodge accessing genericCar tyre and doors:`, dodge.door , dodge.tyre );
+// console.log(`Now lets access genericCar "from" tesla which is directly link to proto of dodge and dodge is directly link to genericCar :`, tesla.tyre , tesla.door);
+
+    
