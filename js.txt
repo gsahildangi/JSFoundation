@@ -246,3 +246,21 @@ way and that is "constructor function" . Also as we have studied we can reuse th
 a class can have multiple objecs and single blueprint can be used many places.
 
 
+function Person ( name, age) {
+   //let myName = name ; // Now initialy we are only using the parameter value now we want to save it in a variable.
+    // Now this above one is also a valid way however in construtor functon we use it like this.name = name.
+    //** Also when we intialize a new varible then we also have to return it as it act as a funtion in that case. 
+    this.name = name;   // when using this.name then it act as a constructor function. 
+    this.age = age; 
+}
+//now this new keyword is conecte to this keyword so it can access the value without returning it.
+let myCafe  = new Person("Sahil" , 33); Now this is using it as a constructor fuction as we are using new keywod.
+console.log(myCafe) ; Output : Peron {name : 'Sahil' , age : 33}
+
+// *** Now lets check this and lets not use the this.name in the defination and make it a simple fuction.
+fucntion Person1 (name , age){
+    let myName = name;
+    let myAge = age;   // as this a normal funciton we can not acces it values directly so we have to return this and then catch it.
+}
+    
+                                         Contructor fucntion VS Prototype.
