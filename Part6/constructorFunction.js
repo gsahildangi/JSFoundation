@@ -41,5 +41,18 @@ Animal.prototype.sound = function (makeSound){
 }  
 
 let dog = new Animal("Dog" ,"Barking");
-console.log(dog);
-console.log(dog.sound("roar"));// this will work when we pass the sound in sound function 
+// console.log(dog);
+// console.log(dog.sound("roar"));// this will work when we pass the sound in sound function 
+
+
+function Drink (name){
+     if(!new.target){
+         throw new Error("Drink should be called using new keyword");
+     }
+    this.name = name;
+    console.log(`This is ${this.name}`);
+    
+}
+
+let tea = new Drink("Coffee");
+
