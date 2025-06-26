@@ -328,4 +328,54 @@ let tea = new Drink("Coffee");
                                     "Classes Objects and inheritance in js"
 
   
-                                    
+    Inheritance  is just inheriting the methods and data from the parent class. 
+
+    //                   Encapsulation                             
+
+    
+//                           "Encapsulation"
+// Encapsulation is a fundamental concept in object - oriented programming(OOP) that refers to the bundling
+//  of data(variables) and methods(functions) that operate on that data into a single unit, typically a 
+//  class. It also involves restricting direct access to some of an object's components, which is a way 
+//  of enforcing data hiding.
+// Data is accessed or modified—usually through well-defined interfaces like getters and setters.
+// In encaspsulation we restrict the direct access of object data.
+
+//To do this in features/variable we use "#" in front of that variable.
+
+class BankBalance {
+    #ifscCOde = 'IPDPS7214' //now this feature or variable can not be directly used to use this we have
+    //to make a custom method.
+    #balance = 0;
+
+    deposit(amount) {
+        this.#balance = this.#balance + amount;
+        return this.#balance;
+    }
+
+    getBalance() {
+        return `$ ${this.#balance}`
+    }
+}
+
+let myBalance = new BankBalance();
+// console.log(myBalance.getBalance());//as we have not set any amount now first lets deposite some amount in it
+myBalance.deposit(1000000003333);
+// console.log(myBalance.getBalance());
+
+//                                        Abstraction
+
+ Abstraction
+// Abstraction in object-oriented programming is all about showing only the relevant details to the user
+// while hiding the complex inner workings behind the scenes. It's like driving a car: you know how to 
+// steer, brake, and accelerate—but you don’t need to understand how the engine works to get from point A to B.
+
+// In programming terms, abstraction lets you define what an object does without necessarily describing how
+//  it does it. This is typically achieved through abstract classes and interfaces.
+
+****** (Very Important)
+// Here’s a simple way to put it:
+
+// - Encapsulation hides the data.
+
+// - Abstraction hides the complexity.
