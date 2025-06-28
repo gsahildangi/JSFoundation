@@ -379,3 +379,23 @@ myBalance.deposit(1000000003333);
 // - Encapsulation hides the data.
 
 // - Abstraction hides the complexity.
+
+//                                        Static method
+
+
+/*
+In JavaScript, a static method is a function that belongs to the class itself, rather than to any 
+specific instance of that class. Static methods are called directly on the class name and do not require
+ creating an object (instance) of the class.
+
+Key characteristics of static methods:
+Called on the Class: They are invoked using the class name, not an object instance.
+
+No this context (for instance properties): Inside a static method, this refers to the class constructor 
+itself, not an instance of the class. Therefore, you cannot directly access instance properties or 
+methods using this within a static method.
+
+Utility functions: They are commonly used for utility functions, helper methods, or factory methods t
+hat perform operations related to the class as a whole, rather than specific object data.
+*/ 
+*/

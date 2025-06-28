@@ -121,3 +121,78 @@ myBalance.deposit(1000000003333);
 // Here’s a simple way to put it:
 // - Encapsulation hides the data.
 // - Abstraction hides the complexity.
+
+class CoffeMachine {
+    start( ){
+        //call db      - so this is not visible to client as what is happening .
+        //filter value
+     return `Starting the machine.` // end user will only get this message.
+    }
+    BrewCoffee(){
+        //complex calculations
+    return `Brewing coffee`
+    }
+    pressStartButton(){
+      let msg1 =  this.start();
+       let msg2 = this.BrewCoffee();
+    return `${msg1} ....Loading......${msg2}`;
+    }
+
+}
+
+let myMachine = new CoffeMachine();
+// console.log(myMachine.start());
+// console.log(myMachine.BrewCoffee());
+// console.log(myMachine.pressStartButton());
+
+//                                              POLYMORPHISM
+//Something that can take multiple forms.
+
+class Bird {
+    
+    fly(){
+     return `Birds are flying....`
+    }
+}
+
+class Penguin extends Bird {
+    fly(){
+        return `Penguin can't fly`
+    }
+}
+
+let bird = new Bird();
+// console.log(bird.fly());
+let penOne = new Penguin();
+// console.log(penOne.fly());
+
+
+//                        Static Method.
+// By making static method we want to ensure that we only call the fucntion with class name and where we
+//don't want user to make instance of that class.
+/*
+In JavaScript, a static method is a function that belongs to the class itself, rather than to any 
+specific instance of that class. Static methods are called directly on the class name and do not require
+ creating an object (instance) of the class.
+Key characteristics of static methods:
+Called on the Class: They are invoked using the class name, not an object instance.
+No this context (for instance properties): Inside a static method, this refers to the class constructor 
+itself, not an instance of the class. Therefore, you cannot directly access instance properties or 
+methods using this within a static method.
+Utility functions: They are commonly used for utility functions, helper methods, or factory methods t
+hat perform operations related to the class as a whole, rather than specific object data.
+*/ 
+class Calculator{
+   static add (a ,b){
+     return (a+b)
+   }
+}
+
+let cal1 = new Calculator()
+// console.log(cal1.add(5,4));// This will give error as Add is not a function. 
+//To call this we have to call it with the class name.
+//This will work in static method case
+// console.log(Calculator.add(2,5));
+
+//                                           Getter and setter in js
+
