@@ -501,3 +501,30 @@ Security boundaries: same-origin policy, CORS, content security policy.
 
 Keeping these concepts in mind will clarify how browser environments work and how JavaScript 
 orchestrates dynamic, interactive web experiences.
+
+                                   Browser
+      Window -----------------> -----------
+           |                     |  chrome |
+           |                     |         |
+           |                     -----------
+           |----------------------------------
+           |                     |           | 
+           DOM                  BOM        JavaScript - here you write your - Objects , array, functions
+            |                     |
+       All the Elements        navigator
+                               screen 
+                               location
+
+    //These are also called web api's                           
+ //Now to work with window objects go to the browser console
+   Window.outerWidth
+   1167
+
+navigator.userAgent   - this has alot of properties do check on mdn
+ give browser info that we can use in the code
+
+location.host
+//give you the ip address.
+
+location.href
+//give the full location.
