@@ -196,3 +196,31 @@ let cal1 = new Calculator()
 
 //                                           Getter and setter in js
 
+class Employee{
+    #salary ; // we make salry as private so that it can not be accessed out side the
+    constructor(name, salary){
+        if (salary <0 ){
+            throw new Error("Salary cannot be negtive");
+        }
+      this.name = name
+      this.#salary = salary  
+      }
+
+    get salary(){
+       return `We will retrun the salary ${this.#salary}`
+    }
+    set salary(value){
+        if ( value < 0 ){
+            console.error("Invalid salary can not be -ve");
+        }else{
+        this.#salary = value
+        }
+    }
+
+}
+
+let emp1 = new Employee("Sahil" ,-50000)
+console.log(emp1.salary); //Now here the setter is returning value.
+// emp1.salary = -5000; // now th setter is working as we are settig the value. however htere is a check int hat 
+                     // to check wheather the salry is -ve or not however it is still assising it as -ve 
+                    //To solve that put a check in constructor as it is assining the value.
