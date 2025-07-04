@@ -502,7 +502,7 @@ Security boundaries: same-origin policy, CORS, content security policy.
 Keeping these concepts in mind will clarify how browser environments work and how JavaScript 
 orchestrates dynamic, interactive web experiences.
 
-                                   Browser
+ This is window object of browser       Browser
       Window -----------------> -----------
            |                     |  chrome |
            |                     |         |
@@ -528,3 +528,16 @@ location.host
 
 location.href
 //give the full location.
+
+//DOM element are nothing but head body and these element we use on our webpage.
+ we can manipulate them with document.getElementById("h1") like this.
+
+======================================================================================================
+                                Part8/
+                                DOM Manupulation
+======================================================================================================
+                DOM Manipulation.
+               
+               Divided into these two parts.
+
+get the Element                         Event Listening           
