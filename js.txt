@@ -541,3 +541,8 @@ location.href
                Divided into these two parts.
 
 get the Element                         Event Listening           
+
+//  Most of the notes in code files Part8
+
+HTML - MarkUp language
+DOM - Processed element of HTML in document tree in memory
