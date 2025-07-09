@@ -54,4 +54,18 @@ document.getElementById('highlightFirstCity').addEventListener('click' ,function
 //     Example 3:-Manipulating the DOM Elements
    
 document.getElementById('changeOrder').addEventListener('click', function(){
-   })
+  let coffeeTyp =  document.getElementById('coffeeType')
+//   console.log(coffeeTyp);
+     coffeeTyp.textContent = "Espresso";
+     //Now lets add some css to it when user will click the button.
+     coffeeTyp.style.backgroundColor = "blue";
+     coffeeTyp.style.padding = "5px";
+  
+})
+
+//     Example 4:-Creating and Inserting Elements
+
+  document.getElementById('addNewItem').addEventListener('click', function(){
+         
+  })
+
