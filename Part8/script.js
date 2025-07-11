@@ -66,6 +66,40 @@ document.getElementById('changeOrder').addEventListener('click', function(){
 //     Example 4:-Creating and Inserting Elements
 
   document.getElementById('addNewItem').addEventListener('click', function(){
-         
+         let myTask = document.createElement('li')
+         myTask.textContent = "Eggs";
+         document.getElementById('shoppingList').appendChild(myTask);
   })
 
+
+// Example 5: Removing element from DOM
+
+document.getElementById('removeLastTask').addEventListener('click',function(){
+     let allTask = document.getElementById('taskList')   
+      //   console.log(document.getElementById('taskList'));
+            
+        allTask.lastElementChild.remove()
+;})
+
+//Example 6: Event Handling in DOM
+
+  document.getElementById('clickMeButton').addEventListener('mouseover',function(){
+    //Some more we can use are - click , dbclick, mouseover and can check your self.  
+   alert("Sahil Dangi");
+
+   })
+
+ //Example 7: Event Deligation.
+    
+ document.getElementById('teaList').addEventListener('click',function(event){
+      // console.log(event); // Now this will give us the event that is happening and other information about it
+                           //just by clicking somewhere we can check what our click is pointing out to.
+                           // a PointerEvent is triggered.
+      //Now in this pointer event there is a method target to know the target of mouse pointer.
+      
+      // console.log(event.target); //this will give the whole target   <li class="teaItem">::marker "Black tea"</li>
+      // console.log(event.target.textContent); // will give the content that mean black tea will come
+
+
+      
+ })
