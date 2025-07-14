@@ -100,6 +100,54 @@ document.getElementById('removeLastTask').addEventListener('click',function(){
       // console.log(event.target); //this will give the whole target   <li class="teaItem">::marker "Black tea"</li>
       // console.log(event.target.textContent); // will give the content that mean black tea will come
 
-
+   if (event.target && event.target.matches('.teaItem')){
+      alert("You have selected :" + event.target.textContent)
+   }
       
  })
+
+ // Example 8 : Form Handling
+
+      // Important points for form and preventDefault();
+
+//The action attribute of a <form> tag tells the browser where to send the form data. 
+//It typically contains a URL to a server-side script (like PHP, Node.js, etc.) that processes the data.
+
+//Ex: <form action="https://example.com/submit-form" method="POST">
+
+// When a form is submitted in HTML, the default behavior of the browser is to:
+// Send the form data to a server (if action is defined),
+// Or, if there's no action, reload the page.
+// This automatic page reload happens almost instantly, which interrupts your script.
+// So even though console.log(event) is called, the log gets wiped out with the refresh — it’s like 
+// trying to read a message while the screen vanishes.
+// ✅ What event.preventDefault() actually does
+// By calling event.preventDefault(), you're telling the browser:
+// This stops the page from reloading, giving your script time to fully execute.
+// Now, console.log(event) stays visible in the dev tools, and you can handle the data however you
+//  like — validate it, display it, store it, dance with it 
+        
+ document.getElementById('feedbackForm').addEventListener('submit' , function(event){
+        event.preventDefault();  
+      
+      // const label = document.querySelector('label[for="feedbackInput"]');
+      // console.log(label.textContent); // Output: "Your Feedback :"
+
+   let feedback =  document.getElementById('feedbackInput').value
+   console.log(feedback); 
+   //Now we need to diplay it on Paragraph
+   document.getElementById('feedbackDisplay').textContent = `Your Feedback is : ${feedback}`
+ })
+
+ // Example 9 :- DOM Content Loaded.
+   
+    document.addEventListener('DOMContentLoaded' , function(){
+      document.getElementById('domStatus').textContent = "DOM is fully Loaded."
+    })
+
+//Example 10: CSS class Manupulation    
+
+ document.getElementById('toggleHighlight').addEventListener('click' ,function(){
+     let descriptionText =  document.getElementById('descriptionText')  
+        descriptionText.classList.toggle('highlight')
+    }) 

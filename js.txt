@@ -546,3 +546,67 @@ get the Element                         Event Listening
 
 HTML - MarkUp language
 DOM - Processed element of HTML in document tree in memory
+
+
+
+
+/*    DOM final 5 Challenges ----------------------Notes on form and preventDefault()
+                   
+Why the event disappears quickly without event.preventDefault()
+When a form is submitted in HTML, the default behavior of the browser is to:
+
+Send the form data to a server (if action is defined),
+
+Or, if there's no action, reload the page.
+
+This automatic page reload happens almost instantly, which interrupts your script.
+
+So even though console.log(event) is called, the log gets wiped out with the refresh — it’s like trying to read a message while the screen vanishes.
+
+✅ What event.preventDefault() actually does
+By calling event.preventDefault(), you're telling the browser:
+
+This stops the page from reloading, giving your script time to fully execute.
+
+Now, console.log(event) stays visible in the dev tools, and you can handle the data however you like — validate it, display it, store it, dance with it 🕺.
+
+🚀 What you can do next
+If you want to display the feedback entered, try something like this:
+
+javascript
+document.getElementById('feedbackForm').addEventListener('submit', function(event){
+    event.preventDefault(); // Stops page refresh
+    const input = document.getElementById('feedbackInput').value;
+    document.getElementById('feedbackDisplay').textContent = `Thanks! You said: ${input}`;
+});
+*/
+
+
+
+/*                                Form Actions
+
+Form actions are a key part of HTML forms — they define what happens when a user submits the form.
+
+⚙️ What exactly is the action attribute?
+The action attribute of a <form> tag tells the browser where to send the form data.
+
+It typically contains a URL to a server-side script (like PHP, Node.js, etc.) that processes the data.
+
+html
+<form action="https://example.com/submit-form" method="POST">
+In this example:
+
+When the user submits the form, the browser sends the form data to https://example.com/submit-form.
+
+The server can then store, validate, or respond to the form data however you program it to.
+
+🛠 Common use cases
+Purpose	Example Action
+Submit to a backend server	/api/feedback or submit.php
+Submit to an external URL	https://forms.example.com/submit
+Handle with JavaScript	Leave it empty or use # (and JS handles it)
+🌐 If you leave out action...
+The form submits to the current page's URL by default.
+
+Handy when you want to process the form using JavaScript instead — like you're doing in your example!
+*/
