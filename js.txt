@@ -610,3 +610,79 @@ The form submits to the current page's URL by default.
 
 Handy when you want to process the form using JavaScript instead — like you're doing in your example!
 */
+
+
+--------------------------------------------------------------------------------------------------------------
+                        Part9 - Advance JavaScript
+--------------------------------------------------------------------------------------------------------------
+Usually javascript follow a syncronous approach as once after other line is compiled in sequence.
+Now there are some cases in which we want to javascript behave as Asyncronous .
+Some example in which we need Asyncronous behavior of js.
+- fetching a database
+- waiting for user input 
+- network call
+- read/write in memory
+- time functions
+
+Asyncronous Behaviour of Javascript with a code in which we will use time function.
+
+console.log("hello from console log side");
+//Now here we want to use a time fuction in between these two code till now js is following a syncronous 
+till we
+//use setTimeout now we have observed a different behaviour in which all code is compiled first and then
+// after a particular time that we provided in the last it execute .
+// Now problem in this is that we have write it in between for loop and function.so why it came in last?
+
+//Ans to this using Ai.
+->
+JavaScript is single-threaded, meaning it executes code line-by-line in a synchronous manner.
+
+When it hits setTimeout, it doesn't immediately run the function inside. Instead:
+
+It schedules bubbleDemo() to be executed after at least 5000ms.
+
+The scheduling is handled by the Web APIs, and the callback is pushed to the task queue.
+
+Only after the main synchronous code (your for loop, etc.) finishes, the event loop checks the task 
+queue and runs any pending functions.
+
+function bubbleDemo() {
+    console.log("Hello from bubbleDemo funciton using settimeout");
+    
+}
+
+setTimeout(()=>{
+    bubbleDemo()
+},5000);
+
+
+for (let index = 0; index < 15; index++) {
+     console.log(index);
+         
+}
+
+------------------------------------------------------------------------------------------------------------
+                                      Closure in javascript
+
+//Closures are one of the most powerful and subtle features in JavaScript. They let functions remember 
+//and access variables from their outer scope, even after that scope has finished executing.
+
+A closure happens when:
+
+-A function is defined inside another function, and
+-The inner function uses variables from the outer function,
+-Even after the outer function has returned!
+
+function createCounter() {
+    let count = 0; // this variable lives in the outer scope
+
+    return function() {
+        count++; // the inner function remembers "count"
+        console.log(count);
+    };
+}
+
+const counter = createCounter(); // outer function runs once
+counter(); // prints 1
+counter(); // prints 2
+//Even though createCounter() has finished running, the returned function still remembers count.
