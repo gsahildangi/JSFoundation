@@ -613,7 +613,7 @@ Handy when you want to process the form using JavaScript instead — like you're
 
 
 --------------------------------------------------------------------------------------------------------------
-                        Part9 - Advance JavaScript
+                        Part9 - Advance JavaScript    - Most of the notes in the files itself
 --------------------------------------------------------------------------------------------------------------
 Usually javascript follow a syncronous approach as once after other line is compiled in sequence.
 Now there are some cases in which we want to javascript behave as Asyncronous .
