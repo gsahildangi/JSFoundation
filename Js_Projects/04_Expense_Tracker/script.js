@@ -18,7 +18,7 @@ expenseForm.addEventListener('submit' , (e) => {
     // console.log(typeof expenseAmountInput.value)// it will be string check the theory above
     const amount = parseFloat(expenseAmountInput.value.trim())
     
-    
+    // Leaving this here on the next project that is quiz .
 })
 
 });
