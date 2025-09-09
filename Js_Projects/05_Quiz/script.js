@@ -41,6 +41,25 @@ document.addEventListener('DOMContentLoaded', () => {
     startBtn.addEventListener('click' , startQuiz) // Here usually we define the functanilaty right there but in this 
                                           //case we are saying that on click of startBtn execute this function. 
    
+    nextBtn.addEventListener('click' , () => {
+        currentQuestionIndex++;
+        if(currentQuestionIndex < questions.length){
+           showQuestion();
+        }else {
+        resultContainer.classList.remove('hidden');
+        questionContainer.classList.add('hidden') ;
+        showResult();
+        }
+    })
+               
+    restartBtn.addEventListener('click' , () => {
+        currentQuestionIndex = 0;
+        score = 0;
+       resultContainer.classList.add('hidden');
+       startQuiz();
+
+    })
+
      function startQuiz() {
        startBtn.classList.add('hidden');
        resultContainer.classList.add('hidden');
@@ -51,9 +70,33 @@ document.addEventListener('DOMContentLoaded', () => {
      function showQuestion(){
         nextBtn.classList.add('hidden') // making sure that after clicking the start button once the question start comming before clicking the answer 
                                    // this next butto should be hidden then after selecting the answere we will show the next btn
-        
-     
+        questionText.textContent = questions[currentQuestionIndex].question;
+        choicesList.innerHTML = ""; // to cleaar the previous question.
+        questions[currentQuestionIndex].choices.forEach(choice => {
+            const li = document.createElement('li');
+            li.textContent = choice;
+            // li.addEventListener('click' , selectedAns(choice))// now this is a js problem now it will call te function right away
+                              // and we want it to call it on click event so we face this in react also .
+          //soln:
+           li.addEventListener('click' , () => selectedAns(choice));
+           choicesList.appendChild(li);
 
+        })
      }
 
+     function selectedAns(choice){
+        //    console.log(choice);
+        //    console.log(questions[currentQuestionIndex]);
+        const correctAnswer = questions[currentQuestionIndex].answer ;
+        if(choice === correctAnswer ) {
+            score++;
+        }
+        nextBtn.classList.remove('hidden');
+     }
+       
+    function showResult(){
+        console.log(score);
+        scoreDisplay.innerHTML = `${score} out of ${questions.length} `;
+        
+    } 
 });
